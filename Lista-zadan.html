@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" target="text/css" href="Lista-zadan.css" />
+    <title>Lista zadań na dedlajnie</title>
+  </head>
+  <body>
+    <p>Dodaj nowe zadanie:</p>
+
+    <input type="text" placeholder="Tytuł zadania" id="titleInput" />
+    <input
+      type="text"
+      placeholder="Opisz zadanie"
+      id="descriptionInput"
+    /><br />
+    <select id="selectAddID" class="selectAdd">
+      <option value="null" id="null">Wybierz status</option>
+      <option value="To Do">To do</option>
+      <option value="In Progress">In progress</option>
+      <option value="Done">Done</option>
+    </select>
+    <button type="button" id="addButton">Dodaj</button>
+    <br /><br />
+    <p>Wyszukaj zadanie:</p>
+    <input
+      type="text"
+      placeholder="Wpisz nazwę szukanego zadania"
+      id="searchPhraseInput"
+    /><br />
+    <!-- <select id="selectSearchID" class="selectSearch">
+      <option value="null" id="null">Select status</option>
+      <option value="ToDo" id="opToDo">To do</option>
+      <option value="InProgress" id="opInProgress">In progress</option>
+      <option value="Done" id="opDone">Done</option>
+    </select> -->
+
+    <button type="button" id="searchPhraseButton">Wyszukaj zadanie</button>
+    <br /><br />
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <th>Tytuł</th>
+        <th>Opis</th>
+        <th>Status</th>
+        <th>Edycja</th>
+        <th>Usuń</th>
+      </thead>
+      <tbody id="tbodyID"></tbody>
+    </table>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="Lista-zadan.js"></script>
+  </body>
+</html>
