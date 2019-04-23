@@ -8,17 +8,11 @@ window.onload = function() {
   var selectAddID = document.getElementById("selectAddID");
   var selectSearchID = document.getElementById("selectSearchID");
   var indexClickedEditButton;
-
-  // var opToDo = document.getElementById("opToDo");
-  // var opInProgress = document.getElementById("opInProgress");
-  // var opDone = document.getElementById("opDone");
   var tbodyID = document.getElementById("tbodyID");
   var arr = [];
-  var xyz = [];
 
   // showData(); <<< --- tu będzie wywołanie stanu początkowego, jeśli wykorzystam localStorage
 
-  //użytkownik wpisuje dane do inputów i zaczyna się MAGIA :)
   //dodanie do buttona add zdarzenia KLIK i funkcji, która pobierze dane z inputów i "włoży" je do tablicy
   addButton.addEventListener("click", clickedAddButton);
   // dodanie do buttona search zdarzenia klik i funkcji, która przeszukuje tablice
@@ -160,9 +154,12 @@ window.onload = function() {
     var temp = [];
     for (var i = 0; i < arr.length; i++) {
       if (
-        arr[i].title.toUpperCase() == searchPhraseInput.value.toUpperCase() ||
-        arr[i].description.toUpperCase() ==
-          searchPhraseInput.value.toUpperCase() ||
+        arr[i].title
+          .toUpperCase()
+          .indexOf(searchPhraseInput.value.toUpperCase()) > -1 ||
+        arr[i].description
+          .toUpperCase()
+          .indexOf(searchPhraseInput.value.toUpperCase()) > -1 ||
         arr[i].status.toUpperCase() == searchPhraseInput.value.toUpperCase()
       ) {
         //jeśli sie zgadza to włóż wynik do tablicy
